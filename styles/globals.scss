@@ -1,0 +1,42 @@
+@import "variables";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $white-color;
+}
+
+body {
+  background: radial-gradient(circle at center bottom, $secondary-color, $primary-color 50%);
+  background-color: #000000;
+  min-height: 100vh;
+}
+
+#pageWrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
