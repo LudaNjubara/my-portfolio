@@ -19,10 +19,20 @@
         "name": "next"
       }
     ],
+    "baseUrl": "./",
     "paths": {
-      "@/components/*": ["./*"]
+      "@components/*": ["components/*"],
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"],
+      "@constants/*": ["constants/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "public/static/scripts/hoverEffect.js"
+  ],
   "exclude": ["node_modules"]
 }
