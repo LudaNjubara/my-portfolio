@@ -1,5 +1,9 @@
-import styles from "./page.module.css";
+import HeroSection from "@components/HeroSection/Index";
 
-export default function Home() {
-  return <main className={styles.main}>{/* TODO: Create the portfolio */}</main>;
+export default function HomePage() {
+  return (
+    <div id="pageWrapper">
+      <HeroSection />
+    </div>
+  );
 }
