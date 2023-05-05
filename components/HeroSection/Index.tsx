@@ -59,7 +59,7 @@ function HeroSection() {
             <div className={styles.card_border}></div>
             <div className={styles.card_content}>
               <Image
-                src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/d3801c167390485.644f02d746d9b.png"
+                src="/static/images/heroSection/hero_section_projects_background.png"
                 alt="Projects background"
                 fill
                 loading="eager"
