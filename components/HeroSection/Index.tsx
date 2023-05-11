@@ -26,16 +26,18 @@ function HeroSection() {
                 fill
                 priority
               />
-              <div className={styles.card_content__titleContainer}>
-                <h1 className={styles.card_content__title}>
-                  {constants.heroSection.title}{" "}
-                  <span className={styles.card_content__title__name}>{constants.global.firstName}</span>, a
-                </h1>
-                <h2 className={styles.card_content__subtitle}>{constants.heroSection.subtitle}</h2>
-              </div>
-              <div className={styles.card_content__description_border}>
-                <p className={styles.card_content__description}>{constants.heroSection.description}</p>
-              </div>
+              <a href="#about-me">
+                <div className={styles.card_content__titleContainer}>
+                  <h1 className={styles.card_content__title}>
+                    {constants.heroSection.title}{" "}
+                    <span className={styles.card_content__title__name}>{constants.global.firstName}</span>, a
+                  </h1>
+                  <h2 className={styles.card_content__subtitle}>{constants.heroSection.subtitle}</h2>
+                </div>
+                <div className={styles.card_content__description_border}>
+                  <p className={styles.card_content__description}>{constants.heroSection.description}</p>
+                </div>
+              </a>
             </div>
           </div>
 
