@@ -231,7 +231,8 @@
 
   /* Small card properties */
   &.small {
-    .card_content {
+    .card_content,
+    .card_content__mobile {
       background-color: $primary-color;
 
       &::before {
@@ -274,7 +275,8 @@
       overflow: hidden;
 
       .card_content {
-        &::before {
+        &::before,
+        .card_content__mobile {
           display: none;
         }
       }
@@ -356,6 +358,82 @@
 
         & > img {
           z-index: -1;
+        }
+      }
+    }
+  }
+}
+
+/* Tablet screen size */
+@media screen and (max-width: 768px) {
+  .heroSection__wrapper {
+    padding: $padding-xl $padding-lg $padding-lg;
+
+    .heroSection__content {
+      display: grid;
+      gap: 10px;
+      grid-template-areas:
+        "big big"
+        "social_github projects"
+        "services contact";
+    }
+  }
+
+  /* Card properties */
+  .card {
+    /* Small card */
+    &.small {
+      .card_content,
+      .card_content__mobile {
+        & > a {
+          & > h2 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+          }
+
+          & > p {
+            display: none;
+          }
+        }
+      }
+
+      /* Small card - Github */
+      &.social_github {
+        .card_content {
+          & > :not(.card_content__mobile) {
+            display: none;
+          }
+
+          .card_content__mobile {
+            display: initial;
+          }
+
+          .card_content__container {
+            & > a {
+              font-size: 1rem;
+              padding: $padding-sm $padding-md;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Mobile screen size */
+@media screen and (max-width: 480px) {
+  .heroSection__wrapper {
+    padding: $padding-lg $padding-md $padding-md;
+  }
+
+  /* Card properties */
+  .card {
+    /* Small card */
+    &.small {
+      .card_content,
+      .card_content__mobile {
+        & > a {
+          padding: 1.5rem;
         }
       }
     }
