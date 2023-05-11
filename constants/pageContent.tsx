@@ -17,6 +17,9 @@ export default {
     description:
       "I'm a frontend developer with a passion for building beautiful and functional websites and applications. I have experience with backend as well and have built web apps utilizing my full stack skills. I'm currently looking for a new role in an exciting company.",
     cards: {
+      github: {
+        title: "My Github",
+      },
       services: {
         title: "My Services",
         description:
