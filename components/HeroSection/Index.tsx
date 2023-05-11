@@ -53,6 +53,20 @@ function HeroSection() {
               <div className={styles.card_content__container}>
                 <Link href={constants.global.social.github}>Visit my Github </Link>
               </div>
+
+              {/* Only visible on mobile devices */}
+              <div className={styles.card_content__mobile}>
+                <Image
+                  src="/static/images/heroSection/hero_section_github_background.webp"
+                  alt="Projects background"
+                  fill
+                  loading="eager"
+                  priority
+                />
+                <Link href={constants.global.social.github}>
+                  <h2>{constants.heroSection.cards.github.title}</h2>
+                </Link>
+              </div>
             </div>
           </div>
 
