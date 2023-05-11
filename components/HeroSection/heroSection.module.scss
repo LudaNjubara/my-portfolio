@@ -1,8 +1,32 @@
 @import "@styles/variables";
 
+/* Animations */
+@keyframes descriptionBorderAnimation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  0.001% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes shineAnimation {
+  0%,
+  10% {
+    background-position: -150%;
+  }
+  100% {
+    background-position: 150%;
+  }
+}
+
+/* Wrapper properties */
 .heroSection__wrapper {
   min-height: 100vh;
-  padding: $padding-lg;
+  padding: $padding-xl $padding-lg $padding-lg;
 
   .heroSection__content {
     display: grid;
@@ -18,6 +42,7 @@
   }
 }
 
+/* Card properties */
 .card {
   position: relative;
   border-radius: 5px;
@@ -90,6 +115,7 @@
     }
   }
 
+  /* Big card properties */
   &.big {
     grid-area: big;
     border-top-left-radius: 40px;
@@ -98,10 +124,13 @@
     min-height: 60vh;
 
     .card_content {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: $padding-lg;
+      & > a {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding: $padding-lg;
+      }
     }
 
     .card_content__image {
@@ -162,18 +191,6 @@
       }
     }
 
-    @keyframes descriptionBorderAnimation {
-      0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-      }
-      0.001% {
-        opacity: 1;
-      }
-      100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-      }
-    }
-
     .card_content__description_border {
       position: relative;
       padding: 2px;
@@ -212,6 +229,7 @@
     }
   }
 
+  /* Small card properties */
   &.small {
     .card_content {
       background-color: $primary-color;
@@ -247,6 +265,7 @@
       }
     }
 
+    /* Small card - Github */
     &.social_github {
       border-top-left-radius: 40px;
       border-top-right-radius: 30px;
@@ -276,16 +295,6 @@
         transition: transform 0.3s;
         overflow: hidden;
 
-        @keyframes shineAnimation {
-          0%,
-          10% {
-            background-position: -150%;
-          }
-          100% {
-            background-position: 150%;
-          }
-        }
-
         & > a {
           position: relative;
           display: block;
@@ -305,6 +314,7 @@
       }
     }
 
+    /* Small card - Projects */
     &.projects {
       border-top-right-radius: 50px;
       border-bottom-left-radius: 50px;
@@ -317,6 +327,7 @@
       }
     }
 
+    /* Small card - Services */
     &.services {
       border-bottom-right-radius: 60px;
       border-top-left-radius: 40px;
@@ -333,6 +344,7 @@
       }
     }
 
+    /* Small card - Contact */
     &.contact {
       border-bottom-right-radius: 60px;
       grid-area: contact;

@@ -1,10 +1,11 @@
-import "@styles/globals.scss";
 import { Inter } from "next/font/google";
+
+import "@styles/globals.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "My portofolio",
+  title: "My portfolio",
   description: "Porfolio where you can view my projects and learn more about me!",
   authors: [
     {
@@ -17,7 +18,16 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div id="background_wrapper">
+          <div id="background_inner">
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+          </div>
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
